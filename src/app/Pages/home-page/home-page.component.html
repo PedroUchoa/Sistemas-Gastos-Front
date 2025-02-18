@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <header>
+    <h1>Seja Bem-Vindo ao seu aplicativo de controle de gastos</h1>
+    <button>Adicionar Pessoa</button>
+  </header>
+  <main>
+    <ul>
+      @for(item of arrayPersons();track item){
+        <app-list-item
+        [person]="item"
+        />
+      }@empty {
+        <h1>No person found, please try again</h1>
+      }
+    </ul>
+  </main>
+</div>
