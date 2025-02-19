@@ -32,4 +32,9 @@ export class PersonService {
       options
     );
   }
+
+  editPerson(personId: string, form:any){
+    return this.http.put(`${this.BASE_URL()}/api/v1/person/${personId}`,form)
+  }
+
 }

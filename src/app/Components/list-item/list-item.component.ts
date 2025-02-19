@@ -1,11 +1,12 @@
 import { Component, EventEmitter, inject, Input, output, Output } from '@angular/core';
 import { IPersons } from '../../interfaces/IPersons.interface';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-list-item',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './list-item.component.html',
   styleUrl: './list-item.component.css',
 })

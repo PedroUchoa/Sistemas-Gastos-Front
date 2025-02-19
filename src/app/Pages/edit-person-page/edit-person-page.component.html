@@ -1,0 +1,23 @@
+<div class="create-wrapper">
+  <h1>Edit Person</h1>
+  <form [formGroup]="personForm" (ngSubmit)="editPerson()">
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      placeholder="name"
+      class="input-form"
+      name="teste"
+   />
+
+    <input
+      id="age"
+      type="number"
+      placeholder="age"
+      formControlName="age"
+      class="input-form"
+    />
+
+    <button (onclick)="editPerson()">Sign Up</button>
+  </form>
+</div>

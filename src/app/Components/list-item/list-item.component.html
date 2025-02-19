@@ -7,7 +7,7 @@
         <button>Adicionar nova transação</button>
       </li>
       <li>
-        <button>Editar Pessoa</button>
+        <button [routerLink]="['/edit']" [queryParams]="{id:person.id,name:person.name,age:person.age}" >Editar Pessoa</button>
       </li>
       <li>
         <button (click)="deletePerson()">Excluir Pessoa</button>
