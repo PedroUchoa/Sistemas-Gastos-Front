@@ -1,3 +1,4 @@
+import { ITransaction } from './../../interfaces/ITransaction.interface';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -22,7 +23,6 @@ export class CreatePersonPageComponent {
   router = inject(Router);
 
   createPerson() {
-    console.log(this.personForm.value)
     if (this.personForm.valid) {
       this.personService.addPerson(this.personForm.value).subscribe((data) => {
         this.router.navigate(['/home']);

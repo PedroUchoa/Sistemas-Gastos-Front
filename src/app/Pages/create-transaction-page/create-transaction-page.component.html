@@ -1,0 +1,33 @@
+<div class="create-wrapper">
+  <h1>Create Transaction</h1>
+  <form [formGroup]="personForm" (ngSubmit)="createTransaction()">
+    <input
+      id="description"
+      type="text"
+      formControlName="description"
+      placeholder="Description"
+      class="input-form"
+    />
+    <h1>Transaction Type</h1>
+    <div class="radio-wrapper">
+      <label>
+        <input type="radio" value="INCOME" formControlName="type"/>
+        <span>Income</span>
+      </label>
+      <label>
+        <input type="radio" value="EXPENSE" formControlName="type" />
+        <span>Expense</span>
+      </label>
+    </div>
+
+    <input
+      id="value"
+      type="number"
+      placeholder="Value"
+      formControlName="value"
+      class="input-form"
+    />
+
+    <button (onclick)="createTransaction()">Sign Up</button>
+  </form>
+</div>

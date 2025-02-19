@@ -4,7 +4,7 @@
     <h2>{{ person.age }} anos</h2>
     <ul class="button-list">
       <li>
-        <button>Adicionar nova transação</button>
+        <button [routerLink]="['/transaction']" [queryParams]="{id:person.id}" >Adicionar nova transação</button>
       </li>
       <li>
         <button [routerLink]="['/edit']" [queryParams]="{id:person.id,name:person.name,age:person.age}" >Editar Pessoa</button>

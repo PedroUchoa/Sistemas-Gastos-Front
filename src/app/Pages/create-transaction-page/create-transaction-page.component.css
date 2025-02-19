@@ -1,0 +1,110 @@
+.create-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.create-wrapper h1{
+  font-size: 30px;
+  font-weight: bold;
+  color: #001d3d;
+}
+
+.create-wrapper form {
+  width: 30%;
+  height: 300px;
+  border: 1px solid #001d3d;
+  color: #001d3d;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.create-wrapper form h1{
+  font-size: 17px;
+  font-weight: normal;
+  color: #001d3d;
+}
+
+.input-form {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-bottom: 2px solid #495057;
+  color: #001d3d;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.create-wrapper form input:focus {
+  outline: none;
+  border-bottom: 1px solid #4361ee;
+}
+
+.invalid {
+  border-bottom: 1px solid #9d0208;
+}
+
+.radio-wrapper{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.radio-wrapper label{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.radio-wrapper label input{
+  width: 13px;
+  height: 13px;
+}
+
+.radio-wrapper label span{
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+form button {
+  width: 100%;
+  height: 38px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #001d3d;
+  border: 1px solid #495057;
+  transition: 800ms ease-in-out;
+}
+
+form button:hover {
+  cursor: pointer;
+  border-color: #76c893;
+  color: #76c893;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

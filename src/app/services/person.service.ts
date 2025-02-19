@@ -16,9 +16,7 @@ export class PersonService {
   }
 
   addPerson(form: any) {
-    return this.http.post(`${this.BASE_URL()}/api/v1/person`, form, {
-      responseType: 'text',
-    });
+    return this.http.post(`${this.BASE_URL()}/api/v1/person`, form);
   }
 
   removePerson(personId: string) {

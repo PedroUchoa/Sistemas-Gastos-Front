@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class TransactionService {
     BASE_URL = signal('http://localhost:8080');
 
 
-    createTransaction(personId:string,form:any){
-
+    createTransaction(form:any){
+      return this.http.post(`${this.BASE_URL()}/api/v1/transaction`, form);
     }
 }

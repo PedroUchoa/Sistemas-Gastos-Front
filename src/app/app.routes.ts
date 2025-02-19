@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import { CreatePersonPageComponent } from './Pages/create-person-page/create-person-page.component';
 import { EditPersonPageComponent } from './Pages/edit-person-page/edit-person-page.component';
+import { CreateTransactionPageComponent } from './Pages/create-transaction-page/create-transaction-page.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,11 @@ export const routes: Routes = [
   {
     path: 'edit',
     component: EditPersonPageComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'transaction',
+    component: CreateTransactionPageComponent,
     pathMatch: 'full',
   },
 ];
