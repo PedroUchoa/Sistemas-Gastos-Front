@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -10,9 +10,26 @@ export class PersonService {
 
   BASE_URL = signal('http://localhost:8080');
 
-
-  getPersons(page:number, limit:number): Observable<any>{
-    const params = {page:page.toString(), limit:limit.toString()}
+  getPersons(page: number, limit: number): Observable<any> {
+    const params = { page: page.toString(), limit: limit.toString() };
     return this.http.get<any>(`${this.BASE_URL()}/api/v1/person`, { params });
+  }
+
+  addPerson(form: any) {
+    return this.http.post(`${this.BASE_URL()}/api/v1/person`, form, {
+      responseType: 'text',
+    });
+  }
+
+  removePerson(personId: string) {
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    let options = { headers: headers };
+
+    return this.http.delete(
+      `${this.BASE_URL()}/api/v1/person/${personId}`,
+      options
+    );
   }
 }

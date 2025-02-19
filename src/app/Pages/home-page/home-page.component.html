@@ -1,13 +1,14 @@
 <div class="wrapper">
   <header>
     <h1>Seja Bem-Vindo ao seu aplicativo de controle de gastos</h1>
-    <button>Adicionar Pessoa</button>
+    <button routerLink="/person">Adicionar Pessoa</button>
   </header>
   <main>
     <ul>
-      @for(item of arrayPersons();track item){
+      @for(item of arrayPersons;track item){
         <app-list-item
         [person]="item"
+        (delete)="handleDelete($event)"
         />
       }@empty {
         <h1>No person found, please try again</h1>
